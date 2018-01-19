@@ -40,15 +40,4 @@ public class MVCConfig  extends WebMvcConfigurerAdapter{
         return viewResolver;
     }
 
-//    @Override
-//    public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
-//        converters.add(getJacksonHttpMessageConverter());
-//    }
-//
-//    @Bean(name = "jacksonHttpMessageConverter")
-//    public MappingJackson2HttpMessageConverter getJacksonHttpMessageConverter() {
-//        MappingJackson2HttpMessageConverter converter = new MappingJackson2HttpMessageConverter();
-//        converter.setPrettyPrint(true);
-//        return converter;
-//    }
 }

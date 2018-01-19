@@ -9,7 +9,7 @@ import com.service.AddressService;
 
 import java.util.List;
 
-@Service(value = "AddressServiceImpl")
+@Service
 public class AddressServiceImpl implements AddressService {
 
     @Autowired

@@ -19,9 +19,9 @@ import java.util.Properties;
 @Configuration
 @PropertySource(value = "classpath:hibernate.properties") //<context:property-placeholder location=".." />
 @ComponentScan(basePackages = "com")
-@EnableScheduling //task:annotation-driven
 @EnableTransactionManagement
 public class ApplicationConfig {
+
     @Autowired
     private Environment environment;
 

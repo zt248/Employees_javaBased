@@ -1,4 +1,4 @@
-package com.controller.adrress;
+package com.controller.address;
 
 import com.dao.DaoException;
 import com.model.Address;

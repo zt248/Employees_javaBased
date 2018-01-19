@@ -13,7 +13,7 @@ public class Address implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "coutry")
+    @Column(name = "country")
     private String country;
 
     @Column(name = "city")

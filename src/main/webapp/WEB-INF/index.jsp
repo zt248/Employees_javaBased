@@ -24,5 +24,12 @@
 <a href="/address/byIdAddress"><button>byIdAddress</button></a>
 <a href="/address/deleteByIdAddress"><button>deleteByIdAddress</button></a>
 <a href="/address/updateAddress"><button>updateAddress</button></a>
+
+
+
+<a href="/employee/getEmployeesList"><button>employeeListDisplay</button></a>
+
+
+
 </body>
 </html>

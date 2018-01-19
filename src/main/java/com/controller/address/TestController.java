@@ -1,6 +1,5 @@
-package com.controller.adrress;
+package com.controller.address;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 //import com.fasterxml.jackson.databind.ObjectMapper;
 import com.dao.AddressDAO;
 import com.dao.DaoException;
@@ -18,7 +17,6 @@ import java.io.IOException;
 import java.util.List;
 
 @Controller
-//@RestController
 public class TestController {
 
     @Autowired
@@ -40,10 +38,8 @@ public class TestController {
 
 
     @RequestMapping(value = "/getListTestAjax", method = RequestMethod.GET)
-//    @ResponseBody
     public String listAddressAjax(Model model) throws DaoException, IOException {
         ObjectMapper objectMapper = new ObjectMapper();
-//       return objectMapper.writeValueAsString(addressDao.getAll());
         model.addAttribute("addressList", objectMapper.writeValueAsString(addressDao.getAll()));
         return "views/testView";
     }
