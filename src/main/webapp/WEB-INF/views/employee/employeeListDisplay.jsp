@@ -16,7 +16,7 @@
     <th>Город</th>
     <th>Улица</th>
     <th>Почтовый индекс</th>
-    <%--<th>department</th>--%>
+    <th>Отдел</th>
 <c:forEach items="${listEmployees}" var="employees">
     <tr>
         <td>${employees.id}</td>
@@ -27,7 +27,7 @@
         <td>${employees.address.city}</td>
         <td>${employees.address.street}</td>
         <td>${employees.address.postCode}</td>
-        <%--<td>${employees.departments}</td>--%>
+        <td>${employees.departments}</td>
     </tr>
     </c:forEach>
 </table>

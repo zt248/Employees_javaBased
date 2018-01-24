@@ -11,8 +11,11 @@ public class Department implements java.io.Serializable{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "title")
-    private String title;
+    @Column(name = "organization")
+    private String organization;
+
+    @Column(name = "position")
+    private String position;
 
     @ManyToMany(mappedBy = "departments")
     private Set<Employee> employees;
@@ -21,9 +24,9 @@ public class Department implements java.io.Serializable{
 
     }
 
-    public Department(Long id, String title) {
-        this.id = id;
-        this.title = title;
+    public Department(String organization, String position) {
+        this.organization = organization;
+        this.position = position;
     }
 
     public Long getId() {
@@ -34,27 +37,28 @@ public class Department implements java.io.Serializable{
         this.id = id;
     }
 
-    public String getTitle() {
-        return title;
+    public String getOrganization() {
+        return organization;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setOrganization(String organization) {
+        this.organization = organization;
     }
 
-    public Set<Employee> getEmployees() {
-        return employees;
+    public String getPosition() {
+        return position;
     }
 
-    public void setEmployees(Set<Employee> employees) {
-        this.employees = employees;
+    public void setPosition(String position) {
+        this.position = position;
     }
 
     @Override
     public String toString() {
         return "Department{" +
                 "id=" + id +
-                ", title='" + title + '\'' +
+                ", organization='" + organization + '\'' +
+                ", position='" + position + '\'' +
                 '}';
     }
 }

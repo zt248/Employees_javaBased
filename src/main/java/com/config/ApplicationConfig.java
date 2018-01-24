@@ -1,6 +1,7 @@
 package com.config;
 
 import org.hibernate.SessionFactory;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -59,5 +60,10 @@ public class ApplicationConfig {
         HibernateTransactionManager txManager = new HibernateTransactionManager();
         txManager.setSessionFactory(s);
         return txManager;
+    }
+
+    @Bean
+    public ModelMapper modelMapper() {
+        return new ModelMapper();
     }
 }

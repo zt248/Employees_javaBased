@@ -27,7 +27,8 @@ public class Employee implements Serializable{
     @OneToOne(cascade = CascadeType.ALL)
     private Address address;
 
-    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+//    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinTable(
             name = "empl_depa",
             joinColumns = @JoinColumn(name = "employee_id"),

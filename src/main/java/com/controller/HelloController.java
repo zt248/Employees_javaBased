@@ -14,7 +14,14 @@ public class HelloController {
         return "/index";
     }
 
-}
+    @RequestMapping(value = "menu")
+    public String menu (){
+        return "views/menu";
+    }
+
+
+    }
+
 
 
 

@@ -17,8 +17,13 @@ public class AddressController {
     @Autowired
     private AddressService addressService;
 
-//Чтение записей
+    //Переход к работе с адресами
+    @RequestMapping(value = "/address/menu", method = RequestMethod.GET)
+    public String addressMenu() {
+        return "views/address/jobAddress";
+    }
 
+    //Чтение записей
     @RequestMapping(value = "/address/getListAddress", method = RequestMethod.GET)
     public String listAddress(Model model) throws DaoException {
         model.addAttribute("listAddress", this.addressService.getAll());

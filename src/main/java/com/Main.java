@@ -34,20 +34,21 @@ public class Main {
 
 
         Address address = new Address();
-        address.setCity("Минск");
+        address.setCity("Вилейка");
         address.setCountry("Беларусь");
         address.setPostCode("244123");
-        address.setStreet("Фогеля 1Е");
+        address.setStreet("Независимости 2 кв 121");
 
 
         Department department = new Department();
-        department.setTitle("Грузчик ТЦ Уручье");
+        department.setPosition("Фельдшер-лаборант");
+        department.setOrganization("Вилийский ЦРБ");
 
         Employee employee = new Employee();
 
-        employee.setBirthday(new Date(28, 4, 92));
-        employee.setLastName("Евгений");
-        employee.setFirstName("Царик");
+        employee.setBirthday(new Date(77, 29, 11));
+        employee.setLastName("Наталья");
+        employee.setFirstName("Шут");
         employee.setAddress(address);
 
         Set<Department> departmentList = new HashSet<>();
@@ -57,5 +58,7 @@ public class Main {
         employeeDAO.add(employee);
 //        departmentDAO.add(department);
 //        addressDAO.add(address);
+
+
     }
 }
